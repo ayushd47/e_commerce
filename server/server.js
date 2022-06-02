@@ -13,11 +13,14 @@ const connectDB = require('./database/db');
 //connect DB
 connectDB();
 
+const router = require('./route/index');
+
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(hpp());
+app.use(router);
 
 const port = config.env.LOCAL_URL.PORT;
 const url = config.env.LOCAL_URL.URL;
