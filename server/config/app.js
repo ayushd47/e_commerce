@@ -15,7 +15,7 @@ module.exports = {
         MONGO: {
             URL: process.env.DATABASE_URL,
             PORT: process.env.DATABASE_PORT,
-            DATABASE: process.env.DATABASE_NAME,
+            DATABASE_NAME: process.env.DATABASE_NAME,
 
         }
     },
